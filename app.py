@@ -12,7 +12,7 @@ def main():
 def hello_world(name):
     #x = name+"x"
     testurl = "https://cdnetworks.com"
-    request_url = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=mobile&key=AIzaSyAsuAfkLwf8_qnzEMET8bH2BNLNhhntat4"
+    request_url = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=mobile&key=X"
 
     url = requests.get(request_url)
     jsons = json.loads(url.text)
