@@ -8,12 +8,20 @@ app = Flask(__name__)
 def main():
     return render_template("index.html")
 
+<<<<<<< HEAD
 @app.route("/testresults",methods = ['POST'])
 def hello_world():
 
     #testurl = "https://cdnetworks.com"
     testurl = request.form['text']
     request_url = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=mobile&key=AIzaSyDplKio3HHteEPFPN-fkDquFeHKVodlJBw"
+=======
+@app.route("/login/<string:name>",methods = ['POST', 'GET'])
+def hello_world(name):
+    #x = name+"x"
+    testurl = "https://cdnetworks.com"
+    request_url = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=mobile&key=keyhere"
+>>>>>>> origin/master
 
     url = requests.get(request_url)
     jsons = json.loads(url.text)
