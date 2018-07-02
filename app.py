@@ -14,8 +14,8 @@ def hello_world():
     #testurl = "https://cdnetworks.com"
     testurl = request.form['text']
 <<<<<<< HEAD
-    request_url_mobile = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=mobile&key=AIzaSyDplKio3HHteEPFPN-fkDquFeHKVodlJBw"
-    request_url_desktop = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=desktop&key=AIzaSyDplKio3HHteEPFPN-fkDquFeHKVodlJBw"
+    request_url_mobile = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=mobile&key=key123"
+    request_url_desktop = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=desktop&key=key123"
 
     url = requests.get(request_url_mobile)
     url2 = requests.get(request_url_desktop)
