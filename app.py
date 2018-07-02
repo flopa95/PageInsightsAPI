@@ -13,6 +13,7 @@ def hello_world():
 
     #testurl = "https://cdnetworks.com"
     testurl = request.form['text']
+<<<<<<< HEAD
     request_url_mobile = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=mobile&key=AIzaSyDplKio3HHteEPFPN-fkDquFeHKVodlJBw"
     request_url_desktop = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=desktop&key=AIzaSyDplKio3HHteEPFPN-fkDquFeHKVodlJBw"
 
@@ -41,6 +42,9 @@ def hello_world():
          file_size_savings = "Your images are fully optimized."
          img_opt = ""
     
+=======
+    request_url = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=mobile&key=yourkeyhere"
+>>>>>>> origin/master
 
 
     return render_template ("result.html",
