@@ -1,23 +1,45 @@
+<!DOCTYPE html>
 <html>
-
-<title> Google PageInsights API </title> 
-
-
-<Head><b><font size=5>Google PageInsights API WebApp</font></b></Head>
-
+<head>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+  </head>
 <body>
-</br>
-</br>
-</br>
-      
-<form action = "/login" method = "post">
-    <p>Enter Test URL:</p>
-    <p><input type = "text" name = "nm" /></p>
-    <p><input type = "submit" value = "Start Website Analysis" /></p>
- </form>
-      
-</br>
 
-<u>Results:</u>
+<div class="container">
+  <form action="/testresults" method = "post">
+  
+      <label for="url">URL</label>
+      <input type="text" id="testurl" name="testurl" placeholder="Your test URL..">
+
+      <div class="container2">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+      
+      <div class="container2">
+      <label for="email">E-Mail</label>
+      <input type="text" id="email" name="email" placeholder="Your e-mail..">
+      
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" placeholder="Your phone number..">
+      </div>
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="Singapore">Singapore</option>
+        <option value="Taiwan">Taiwan</option>
+        <option value="Indonesia">Indonesia</option>
+      </select>
+  
+      <label for="subject">Remarks</label>
+      <textarea id="subject" name="subject" placeholder="Tell us your remarks and/or special reuqests here.." style="height:100px"></textarea>
+    
+      <input type="submit" value="Start Website Analysis">
+      </form>
+  </div>
+
 </body>
 </html>
