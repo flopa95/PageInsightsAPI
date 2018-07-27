@@ -5,6 +5,10 @@
   </head>
 <body>
 
+  <div class="container" style="text-align:center">
+    <img src="{{ url_for('static', filename='SpeedTestLogo2.png') }}" align="center">
+    </div>
+
 <div class="container">
   <form action="/testresults" method = "post">
   
@@ -36,10 +40,9 @@
   
       <label for="subject">Remarks</label>
       <textarea id="subject" name="subject" placeholder="Tell us your remarks and/or special reuqests here.." style="height:100px"></textarea>
-    
       <input type="submit" value="Start Website Analysis">
       </form>
-  </div>
+</div>
 
 </body>
 </html>
