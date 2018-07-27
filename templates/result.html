@@ -1,16 +1,23 @@
+<!DOCTYPE html>
 <html>
-
-
-<b>Test Domain: </b>{{name}}
+<head>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+  </head>
+<body>
+  
+<div class="container">
+<p><b>Test Domain: </b></p>{{name}}
 <br>
 <b>Website Title: </b>{{title}}
+</div>
 <br>
-<br>
+<div class="container">
 <b><u>Test Results</u></b>
 <br>
 <b>Optimization Score (Desktop): </b>{{desktop_opt_score}}
 <br>
 <b>Optimization Score (Mobile): </b>{{mobile_opt_score}}
+<br>
 <br>
 <b>Median Desktop Page Loading Time in milliseconds: </b> {{loading_dist_desktop}}
 <br>
@@ -28,13 +35,14 @@
     <br>
     {{browser_caching}}
   </details>
-
+<br>
 <b>Mobile Image Optimization: </b> {{file_size_savings}} {{img_opt}}
 
+</div>
 
 <form action = "/">
-<p><input type = "submit" value = "Go Back Website Analysis" /></p>
+<p><input type = "submit" value = "Test Another Website" /></p>
  </form>
 
-
+</body>
 </html>
