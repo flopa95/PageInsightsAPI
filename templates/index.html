@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
-<body>
+  <body>
+    <div class="container shadow-1">
+      <div class="logo">
+        <a href="https://www.cdnetworks.com"><img src="{{ url_for('static', filename='SpeedTestLogo2.png') }}" align="center"></a>
+      </div>
+      <form action="/testresults" method = "post">
+    
+        <label for="url">URL</label>
+        <input type="text" id="testurl" name="testurl" placeholder="Your test URL..">
 
-  <div class="container" style="text-align:center">
-    <img src="{{ url_for('static', filename='SpeedTestLogo2.png') }}" align="center">
+        <div class="container2">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        </div>
+        
+        <div class="container2 space">
+          <label for="email">E-Mail</label>
+          <input type="text" id="email" name="email" placeholder="Your e-mail..">
+          
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" placeholder="Your phone number..">
+        </div>
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="Singapore">Singapore</option>
+          <option value="Taiwan">Taiwan</option>
+          <option value="Indonesia">Indonesia</option>
+        </select>
+    
+        <label for="subject">Remarks</label>
+        <textarea id="subject" name="subject" placeholder="Tell us your remarks and/or special requests here.." style="height:100px"></textarea>
+      
+        <div class="container3">
+          <input type="submit" value="Analyse Website">
+        </div>
+      </form>
     </div>
 
-<div class="container">
-  <form action="/testresults" method = "post">
-  
-      <label for="url">URL</label>
-      <input type="text" id="testurl" name="testurl" placeholder="Your test URL..">
 
-      <div class="container2">
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your first name..">
-  
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      </div>
-      
-      <div class="container2">
-      <label for="email">E-Mail</label>
-      <input type="text" id="email" name="email" placeholder="Your e-mail..">
-      
-      <label for="phone">Phone Number</label>
-      <input type="text" id="phone" name="phone" placeholder="Your phone number..">
-      </div>
-
-      <label for="country">Country</label>
-      <select id="country" name="country">
-        <option value="Singapore">Singapore</option>
-        <option value="Taiwan">Taiwan</option>
-        <option value="Indonesia">Indonesia</option>
-      </select>
-  
-      <label for="subject">Remarks</label>
-      <textarea id="subject" name="subject" placeholder="Tell us your remarks and/or special requests here.." style="height:100px"></textarea>
-    
-      <div class="container3">
-      <input type="submit" value="Start Website Analysis">
-      </div>
-      </form>
-
-
-</body>
+  </body>
 </html>

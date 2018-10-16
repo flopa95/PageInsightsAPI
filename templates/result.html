@@ -1,48 +1,78 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
-<body>
-  
-<div class="container">
-<p><b>Test Domain: </b></p>{{name}}
-<br>
-<b>Website Title: </b>{{title}}
-</div>
-<br>
-<div class="container">
-<b><u>Test Results</u></b>
-<br>
-<b>Optimization Score (Desktop): </b>{{desktop_opt_score}}
-<br>
-<b>Optimization Score (Mobile): </b>{{mobile_opt_score}}
-<br>
-<br>
-<b>Median Desktop Page Loading Time in milliseconds: </b> {{loading_dist_desktop}}
-<br>
-<b>Median Mobile Page Loading Time in milliseconds: </b> {{loading_dist_mobile}}
-<br>
-<b>Enable compression: </b> {{compression_savings}}
-<br>
-<b>Reduce server response time: </b> {{server_response}}
-<br>
-<b>Leverage browser caching for the following resources: </b>
-<br>
-<details>
-    <summary>Show More/Less</summary>
-    Sample text (delete later)
-    <br>
-    {{browser_caching}}
-  </details>
-<br>
-<b>Mobile Image Optimization: </b> {{file_size_savings}} {{img_opt}}
+  <body>
+    
+    <div class="container shadow-1">
+      <div class="logo">
+        <a href="https://www.cdnetworks.com"><img src="{{ url_for('static', filename='SpeedTestLogo2.png') }}" align="center"></a>
+      </div>
+      <hr>
+      
+      <div class="container3">
+        <h1>Test Results: {{ name }}</h1>
+        <div class="score-card">
+          <img src="{{ url_for('static', filename='img/lcd-2059995_640.png') }}" alt="laptop">
+          <div class="card-container">
+            <h2><span class="highlight">{{ desktop_opt_score }}</span>/100</h2> 
+          </div>
+        </div>
 
-</div>
+        <div class="score-card">
+          <img src="{{ url_for('static', filename='img/smartphone-1717177_640.png') }}" alt="mobile">
+          <div class="card-container">
+            <h2><span class="highlight">{{ mobile_opt_score }}</span>/100</h2> 
+          </div>
+        </div>
+      </div>
+      <div class="results">
+        <h2>Website Title: {{ title }}</h2>
+        <br>
+        <table>
+          <tr>
+            <td><b>Loading Time in milliseconds (Desktop): </b></td>
+            <td>{{ loading_dist_desktop }}</td>
+          </tr>
+          <tr>
+            <td><b>Loading Time in milliseconds (Mobile): </b></td>
+            <td>{{ loading_dist_mobile }}</td>
+          </tr>
+        </table>
+        <br>
+        <table>
+          <tr>
+            <td><b>Gzip Compression: </b></td>
+            <td>{{ gzip_compression }}</td>
+          </tr>
+          <tr>
+            <td><b>Server Response: </b></td>
+            <td>{{ server_response }}</td>
+          </tr>
+        </table>
 
-<form action = "/">
-<p><input type = "submit" value = "Test Another Website" /></p>
- </form>
-
-</body>
+        <p>
+          <b>Leverage browser caching for the following resources: </b>
+        </p>
+        <details>
+            <summary>Show More/Less</summary>
+            <p>
+              {{ browser_caching }}
+            </p>
+        </details>
+        <br>
+        <p>
+          <b>Mobile Image Optimization: </b> {{ file_size_savings }} {{ img_opt }}
+        </p>
+        <p> {{ results }} </p>
+      </div>
+      <div class="container3">
+          <form action = "/">
+            <input type = "submit" value = "Test Another Website" />
+          </form>
+        </div>
+    </div>
+  </body>
 </html>

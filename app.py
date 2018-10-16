@@ -1,6 +1,9 @@
 from flask import Flask, render_template, url_for, request
 import requests
 import json
+import pagespeed
+#import plotly
+#plotly.tools.set_credentials_file(username='cweitay93', api_key='Cim7dHbWiCO8p7xatCRD')
 #------------------------------------------------------------------------------------#
 app = Flask(__name__)
 
@@ -11,57 +14,65 @@ def main():
 # Later you should rearrange and split according to desktop and mobile
 
 @app.route("/testresults", methods = ['POST'])
-def hello_world():
+def test_results():
 
     #testurl = "https://cdnetworks.com"
-    testurl = request.form['testurl']
+    testurl = request.form['testurl'] 
 
-    request_url_mobile = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=mobile&key=AIzaSyDplKio3HHteEPFPN-fkDquFeHKVodlJBw"
-    request_url_desktop = "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=" + testurl + "&strategy=desktop&key=AIzaSyDplKio3HHteEPFPN-fkDquFeHKVodlJBw"
+    if testurl.startswith("http://") | testurl.startswith("https://"):
+        testurl = testurl
+    else:
+        testhttps = requests.get("https://" + testurl)
+        if testhttps.status_code == 200:   
+            testurl = "https://" + testurl
+        else:
+            testurl = "http://" + testurl
 
-    url = requests.get(request_url_mobile)
-    url2 = requests.get(request_url_desktop)
-    
-    mobiledata = json.loads(url.text)
-    desktopdata = json.loads(url2.text)
+    pagespeed_obj = pagespeed.pagespeedapi(testurl)
 
+    gzip_enabled = ""
+    if "You have compression enabled" in pagespeed_obj.desktop_result["ruleResults"]["EnableGzipCompression"]["summary"]["format"]:
+        gzip_enabled = "You have gzip compression enabled."
+    else:
+        gzip_enabled = "Gzip compression not enabled. " + pagespeed_obj.desktop_result["ruleResults"]["EnableGzipCompression"]["summary"]["format"] + " " + \
+        pagespeed_obj.desktop_result["ruleResults"]["EnableGzipCompression"]["urlBlocks"][0]["header"]["format"]
+
+    server_response = ""
+    if "Your server responded quickly" in pagespeed_obj.desktop_result["ruleResults"]["MainResourceServerResponseTime"]["summary"]["format"]:
+        server_response = "Your server responded quickly."
+    else:
+        server_response = pagespeed_obj.desktop_result["ruleResults"]["MainResourceServerResponseTime"]["summary"]["format"]
+
+    #Checking specific for Leverage Browser Caching
     browser_caching = []
-
-#Checking the main details
     try:
-        title = mobiledata["title"]
-        mobile_opt_score = str(mobiledata["ruleGroups"]["SPEED"]["score"]) + "/100"
-        desktop_opt_score = str(desktopdata["ruleGroups"]["SPEED"]["score"]) + "/100"
-        loading_dist_mobile = mobiledata["loadingExperience"]["metrics"]["FIRST_CONTENTFUL_PAINT_MS"]["median"]
-        loading_dist_desktop = desktopdata["loadingExperience"]["metrics"]["FIRST_CONTENTFUL_PAINT_MS"]["median"]
-        
+        for result in pagespeed_obj.desktop_result["LeverageBrowserCaching"]["urlBlocks"][0]["urls"]:
+            browser_caching.append(result["result"]["args"][0]["value"])
     except KeyError:
-        title = "N/A"
-        mobile_opt_score = "N/A"
-        desktop_opt_score = "N/A"
-        loading_dist_mobile = "N/A"
-        loading_dist_desktop = "N/A"
+         browser_caching = "You are already fully leveraging on browser caching."
 
-#Checking specific for image optimization  
+    #Checking specific for image optimization  
     try:
-        file_size_savings = "You can reduce your website's images by " + mobiledata["formattedResults"]["ruleResults"]["OptimizeImages"]["urlBlocks"][0]["header"]["args"][1]["value"]
-        img_opt = "(" + mobiledata["formattedResults"]["ruleResults"]["OptimizeImages"]["urlBlocks"][0]["header"]["args"][2]["value"] + " reduction)."
+        file_size_savings = "You can reduce your website's images by " + pagespeed_obj.mobile_result["ruleResults"]["OptimizeImages"]["urlBlocks"][0]["header"]["args"][1]["value"]
+        img_opt = "(" + pagespeed_obj.mobile_result["ruleResults"]["OptimizeImages"]["urlBlocks"][0]["header"]["args"][2]["value"] + " reduction)."
     except KeyError:
          file_size_savings = "Your images are fully optimized."
          img_opt = ""
     
-#Checking specific for Leverage Browser Caching
-    try:
-        for key in mobiledata["formattedResults"]["LeverageBrowserCaching"]["urlBlocks"][0]["urls"]:
-            browser_caching.append(mobiledata["formattedResults"]["LeverageBrowserCaching"]["urlBlocks"][0]["urls"][key]["result"]["args"][0]["value"])
-    except KeyError:
-         browser_caching = "You are already fully leveraging on browser caching."
-
-
     return render_template ("result.html",
-    name=testurl, title=title, desktop_opt_score=desktop_opt_score, mobile_opt_score=mobile_opt_score, loading_dist_desktop=loading_dist_desktop, loading_dist_mobile=loading_dist_mobile, file_size_savings=file_size_savings, img_opt=img_opt,browser_caching=browser_caching)
-    
-
+        name=testurl, 
+        title=pagespeed_obj.title, 
+        desktop_opt_score=pagespeed_obj.desktop_score, 
+        mobile_opt_score=pagespeed_obj.mobile_score, 
+        loading_dist_desktop=pagespeed_obj.desktop_load, 
+        loading_dist_mobile=pagespeed_obj.mobile_load,
+        gzip_compression=gzip_enabled,
+        server_response=server_response,
+        file_size_savings=file_size_savings, 
+        img_opt=img_opt,
+        browser_caching=browser_caching,
+        results=pagespeed_obj.desktop_result["ruleResults"]
+    )
 
 if __name__ == "__main__":
     app.run()
