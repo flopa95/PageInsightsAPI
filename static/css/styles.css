@@ -29,10 +29,14 @@ h3 {
     line-height: 8px;
 }
 
-input, textarea, p, table, tr, td {
+input, textarea, p, table, tr, td, details {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-size: 14px;
+}
+
+tr, td, details {
+    max-width: 540px;
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -48,18 +52,20 @@ input[type=text], select, textarea {
 }
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
+.analysis {
     background-color: #4CAF50;
     font-size: 18px;
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 30px;
     cursor: pointer;
+    transition: .3s ease;
+    outline: none;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
+.analysis:hover {
     background-color: #45a049;
 }
 
@@ -72,6 +78,16 @@ label {
 
 .highlight {
     color: #AAC210;
+    font-size: 36px;
+}
+
+.orange-highlight {
+    color: #FDA100;
+    font-size: 36px;
+}
+
+.red-highlight {
+    color: #E10000;
     font-size: 36px;
 }
 
@@ -88,6 +104,13 @@ label {
     margin: 0 auto;
     display: block;
     
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Add a background color and some padding around the form */
@@ -112,6 +135,11 @@ label {
     text-align: center;
     position: relative;
     display: block;
+}
+
+.container-mobile {
+    border-radius: 4px;
+    display: none;
 }
 
 .space {
@@ -158,9 +186,8 @@ label {
 
 .score-card h2 {
     float: right;
-    margin: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 0px;
+    line-height: 36px;
 }
 
 .results {
@@ -174,6 +201,10 @@ label {
     line-height: 24px;
 }
 
+.result-table-mobile {
+    display: none;
+}
+
 summary {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
@@ -183,4 +214,119 @@ summary {
 td {
     vertical-align: top;
     min-width: 160px;
+}
+
+.scrollable {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+.plot {
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.analysis.spinning {
+    padding-right: 40px;
+}
+
+.analysis.spinning:before {
+    content: "";
+    border-radius: 50%;
+    right: 340px;
+    top: 50%;
+    position: absolute;
+    border-right: 3px solid #FFFFFF;
+    animation: rotate360 .5s infinite linear, exist .1s forwards ease;
+}
+
+@keyframes rotate360 { 
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes exist { 
+    100% {
+        width: 15px;
+        height: 15px;
+        margin: -8px 5px 0 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        padding: 0px;
+    }
+
+    .container {
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 90%;
+    }
+
+    .container2 {
+        display: none;
+    }
+
+    .container-mobile {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .responsive {
+        width: 100%;
+        height: auto;
+    }
+
+    h2 {
+        line-height: 24px;
+    }
+
+    .result-table {
+        display: none;
+    }
+
+    .result-table-mobile {
+        display: inline-block;
+        width: 100%;
+    }
+
+    input[type=text], select, textarea {
+        width: 100%; /* Full width */
+    }
+
+    .analysis.spinning {
+        padding-right: 20px;
+        background-color: rgb(60, 133, 61);
+        cursor: not-allowed;
+    }
+
+    .analysis.spinning:before {
+        display: none;
+    }
+
+    details {
+        max-width: 90%;
+    }
+
+    .scrollable {
+        max-width: 95%;
+        max-height: 200px;
+        overflow-y: scroll;
+    }
 }

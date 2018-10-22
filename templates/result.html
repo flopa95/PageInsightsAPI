@@ -8,23 +8,24 @@
     
     <div class="container shadow-1">
       <div class="logo">
-        <a href="https://www.cdnetworks.com"><img src="{{ url_for('static', filename='SpeedTestLogo2.png') }}" align="center"></a>
+        <a href="https://www.cdnetworks.com"><img class="responsive" src="{{ url_for('static', filename='SpeedTestLogo2.png') }}" align="center"></a>
       </div>
       <hr>
       
       <div class="container3">
-        <h1>Test Results: {{ name }}</h1>
-        <div class="score-card">
+        <h1>Test Results for {{ name }}</h1>
+        <div class="score-card noselect">
           <img src="{{ url_for('static', filename='img/lcd-2059995_640.png') }}" alt="laptop">
+          
           <div class="card-container">
-            <h2><span class="highlight">{{ desktop_opt_score }}</span>/100</h2> 
+            <h2><span id="desktop_score">{{ desktop_opt_score }}</span>/100 <br> Desktop</h2>
           </div>
         </div>
 
-        <div class="score-card">
+        <div class="score-card noselect">
           <img src="{{ url_for('static', filename='img/smartphone-1717177_640.png') }}" alt="mobile">
           <div class="card-container">
-            <h2><span class="highlight">{{ mobile_opt_score }}</span>/100</h2> 
+            <h2><span id="mobile_score" class="highlight">{{ mobile_opt_score }}</span>/100 <br> Mobile</h2> 
           </div>
         </div>
       </div>
@@ -33,46 +34,68 @@
         <br>
         <table>
           <tr>
-            <td><b>Loading Time in milliseconds (Desktop): </b></td>
-            <td>{{ loading_dist_desktop }}</td>
+            <td><b>Loading Time (Desktop): </b></td>
+            <td>{{ loading_dist_desktop }} seconds</td>
           </tr>
           <tr>
-            <td><b>Loading Time in milliseconds (Mobile): </b></td>
-            <td>{{ loading_dist_mobile }}</td>
+            <td><b>Loading Time (Mobile): </b></td>
+            <td>{{ loading_dist_mobile }} seconds</td>
           </tr>
         </table>
         <br>
-        <table>
+        <table class="result-table">
           <tr>
             <td><b>Gzip Compression: </b></td>
-            <td>{{ gzip_compression }}</td>
+            <td>{{ gzip_compression | safe }}</td>
           </tr>
           <tr>
             <td><b>Server Response: </b></td>
-            <td>{{ server_response }}</td>
+            <td>{{ server_response | safe }}</td>
+          </tr>
+          <tr>
+            <td><b>Image Optimization: </b></td>
+            <td>{{ file_size_savings | safe }}</td>
           </tr>
         </table>
-
-        <p>
-          <b>Leverage browser caching for the following resources: </b>
-        </p>
-        <details>
-            <summary>Show More/Less</summary>
-            <p>
-              {{ browser_caching }}
-            </p>
-        </details>
+        <table class="result-table-mobile">
+          <tr>
+            <td><b>Gzip Compression: </b></td>
+          </tr>
+          <tr>
+            <td>{{ gzip_compression | safe }}</td>
+          </tr>
+          <tr>
+            <td><b>Server Response: </b></td>
+          </tr>
+          <tr>
+            <td>{{ server_response | safe }}</td>
+          </tr>
+          <tr>
+            <td><b>Image Optimization: </b></td>
+          </tr>
+          <tr>
+            <td>{{ file_size_savings | safe }}</td>
+          </tr>
+        </table>
         <br>
+        {{ browser_caching | safe }}
+        <br>
+        <h2>Page Load Distribution</h2>
         <p>
-          <b>Mobile Image Optimization: </b> {{ file_size_savings }} {{ img_opt }}
+          The chart below shows the distribution of <b>First Contentful Paint(FCP)</b> and <b>DOMContentLoaded(DCL)</b>
+          events for the website's content.
         </p>
-        <p> {{ results }} </p>
+        <div class="plot">
+          <img class="responsive" src="/plot.png" alt="Chart">
+        </div>
+        <br>
       </div>
       <div class="container3">
-          <form action = "/">
-            <input type = "submit" value = "Test Another Website" />
-          </form>
-        </div>
+        <form action = "/">
+          <button class="analysis" type="submit" value="Test Another Website">Test Another Website</button>
+        </form>
+      </div>
     </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='script/app.js') }}"></script>
   </body>
 </html>

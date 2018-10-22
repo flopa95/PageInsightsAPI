@@ -1,0 +1,1806 @@
+{
+    "captchaResult": "CAPTCHA_NOT_NEEDED",
+    "kind": "pagespeedonline#result",
+    "id": "https://www.cdnetworks.com/us/en",
+    "responseCode": 200,
+    "title": "Global Content Delivery and Distribution | CDNetworks",
+    "ruleGroups": {
+        "SPEED": {
+            "score": 51
+        }
+    },
+    "loadingExperience": {
+        "id": "https://www.cdnetworks.com/us/en",
+        "metrics": {
+            "FIRST_CONTENTFUL_PAINT_MS": {
+                "median": 1480,
+                "distributions": [
+                    {
+                        "min": 0,
+                        "max": 1054,
+                        "proportion": 0.2312631578947368
+                    },
+                    {
+                        "min": 1054,
+                        "max": 2192,
+                        "proportion": 0.5144210526315789
+                    },
+                    {
+                        "min": 2192,
+                        "proportion": 0.25431578947368416
+                    }
+                ],
+                "category": "AVERAGE"
+            },
+            "DOM_CONTENT_LOADED_EVENT_FIRED_MS": {
+                "median": 1658,
+                "distributions": [
+                    {
+                        "min": 0,
+                        "max": 1354,
+                        "proportion": 0.31935483870967746
+                    },
+                    {
+                        "min": 1354,
+                        "max": 2820,
+                        "proportion": 0.5086021505376344
+                    },
+                    {
+                        "min": 2820,
+                        "proportion": 0.17204301075268819
+                    }
+                ],
+                "category": "AVERAGE"
+            }
+        },
+        "overall_category": "AVERAGE",
+        "initial_url": "https://www.cdnetworks.com/us/en"
+    },
+    "pageStats": {
+        "numberResources": 111,
+        "numberHosts": 20,
+        "totalRequestBytes": "20266",
+        "numberStaticResources": 80,
+        "htmlResponseBytes": "151675",
+        "overTheWireResponseBytes": "2659756",
+        "cssResponseBytes": "330589",
+        "imageResponseBytes": "1605765",
+        "javascriptResponseBytes": "1838601",
+        "otherResponseBytes": "179402",
+        "numberJsResources": 35,
+        "numberCssResources": 3,
+        "numTotalRoundTrips": 23,
+        "numRenderBlockingRoundTrips": 1
+    },
+    "formattedResults": {
+        "locale": "en_US",
+        "ruleResults": {
+            "AvoidLandingPageRedirects": {
+                "localizedRuleName": "Avoid landing page redirects",
+                "ruleImpact": 3.0,
+                "groups": [
+                    "SPEED"
+                ],
+                "summary": {
+                    "format": "Your page has {{NUM_REDIRECTS}} redirects. Redirects introduce additional delays before the page can be loaded.",
+                    "args": [
+                        {
+                            "type": "INT_LITERAL",
+                            "key": "NUM_REDIRECTS",
+                            "value": "2"
+                        }
+                    ]
+                },
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "{{BEGIN_LINK}}Avoid landing page redirects{{END_LINK}} for the following chain of redirected URLs.",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "key": "LINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/AvoidRedirects"
+                                }
+                            ]
+                        },
+                        "urls": [
+                            {
+                                "result": {
+                                    "format": "{{FIRST_URL}}",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "FIRST_URL",
+                                            "value": "https://cdnetworks.com/"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{REDIRECTED_URL}}",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "REDIRECTED_URL",
+                                            "value": "https://www.cdnetworks.com/"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{REDIRECTED_URL}}",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "REDIRECTED_URL",
+                                            "value": "https://www.cdnetworks.com/us/en"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "EnableGzipCompression": {
+                "localizedRuleName": "Enable compression",
+                "ruleImpact": 22.294800000000002,
+                "groups": [
+                    "SPEED"
+                ],
+                "summary": {
+                    "format": "Compressing resources with gzip or deflate can reduce the number of bytes sent over the network."
+                },
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "{{BEGIN_LINK}}Enable compression{{END_LINK}} for the following resources to reduce their transfer size by {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "key": "LINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/EnableCompression"
+                                },
+                                {
+                                    "type": "BYTES",
+                                    "key": "SIZE_IN_BYTES",
+                                    "value": "217.7KiB"
+                                },
+                                {
+                                    "type": "PERCENTAGE",
+                                    "key": "PERCENTAGE",
+                                    "value": "71%"
+                                }
+                            ]
+                        },
+                        "urls": [
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://rum-beacon.cdnetworks.com/jsd/ruiter?d=c7c87ea7b85c454b9fe8a3b32c933e72"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "201.5KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "72%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://g.3gl.net/jp/265/v3/M"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "16.2KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "68%"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "LeverageBrowserCaching": {
+                "localizedRuleName": "Leverage browser caching",
+                "ruleImpact": 7.298847552910053,
+                "groups": [
+                    "SPEED"
+                ],
+                "summary": {
+                    "format": "Setting an expiry date or a maximum age in the HTTP headers for static resources instructs the browser to load previously downloaded resources from local disk rather than over the network."
+                },
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "{{BEGIN_LINK}}Leverage browser caching{{END_LINK}} for the following cacheable resources:",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "key": "LINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/LeverageBrowserCaching"
+                                }
+                            ]
+                        },
+                        "urls": [
+                            {
+                                "result": {
+                                    "format": "{{URL}} (expiration not specified)",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://secure.leadforensics.com/js/106977.js"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} (expiration not specified)",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://vidassets.terminus.services/ec48cf4f-ae71-4858-84f5-b585ab72a268/t.js"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://accdn.lpsnmedia.net/api/account/78804126/configuration/le-campaigns/campaigns/626541212/engagements/626547012/revision/538?v=3.0&cb=lp626547012&flavor=dependency"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "60 seconds"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://accdn.lpsnmedia.net/api/account/78804126/configuration/le-campaigns/campaigns/645365712/engagements/645749312/revision/562?v=3.0&cb=lp645749312&flavor=dependency"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "60 seconds"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://accdn.lpsnmedia.net/api/account/78804126/configuration/le-campaigns/zones?fields=id&fields=zoneValue&cb=lpZonesStaticCB"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "60 seconds"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/default-close.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "10 minutes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://lpcdn.lpsnmedia.net/le_re/3.27.0.0-release_2916/jsv2/UISuite.js?_v=3.27.0.0-release_2916"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "10 minutes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://lpcdn.lpsnmedia.net/le_re/3.27.0.0-release_2916/jsv2/overlay.js?_v=3.27.0.0-release_2916"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "10 minutes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://lpcdn.lpsnmedia.net/le_re/3.27.0.0-release_2916/jsv2/toaster.js?_v=3.27.0.0-release_2916"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "10 minutes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://lptag.liveperson.net/lptag/api/account/78804126/configuration/applications/taglets/.jsonp?v=2.0&df=0&b=1"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "10.5 minutes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://lptag.liveperson.net/tag/tag.js?site=78804126"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "10.5 minutes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://maps.googleapis.com/maps/api/js?key=AIzaSyCS2akg2KE_IwDKUD_p9MJmXpqlfhGOnMA"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "30 minutes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.googleadservices.com/pagead/conversion_async.js"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "60 minutes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://g.3gl.net/jp/265/v3/M"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "60 minutes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.google-analytics.com/analytics.js"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "2 hours"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/dist/img/sprachenswitch-sprite.jpg"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/1991/thumb__home-stage-img-mobile/cyber-criminal-hacking-green-1.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/144/thumb__teaser-slider-little-img/bang-olufsen.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/chat-with-us.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/dist/img/sprite-google-pin-map.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/vendor/jquery.bxslider/images/bx_loader.gif"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/77/thumb__fullwidth-slider-img/customer_samsung_logo_01.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/78/thumb__fullwidth-slider-img/customer_hyundai_logo_01.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/88/thumb__fullwidth-slider-img/kuoni-logo.jpeg"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/90/thumb__fullwidth-slider-img/customer_william_hill_logo_01.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/vendor/jquery.socialshareprivacy2/images/dummy_gplus.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/141/thumb__teaser-slider-little-img/raileurope.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/673/thumb__image-slider-img/cdn-speedtest.jpeg"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/70/thumb__teaser-slider-img/business-services-cdn.jpeg"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/91/thumb__fullwidth-slider-img/dell.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/vendor/jquery.socialshareprivacy2/images/dummy_linkedin.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/675/thumb__home-stage-img-mobile/why-cdnetworks.jpeg"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/chat-icon.jpg"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/vendor/jquery.socialshareprivacy2/images/socialshareprivacy_info.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/673/thumb__home-stage-img-mobile_auto_c71bc0ce29dcf25de4d8a9d078aa42fc/cdn-speedtest.jpeg"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/75/thumb__teaser-slider-img/it-services-cdn.jpeg"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/673/thumb__home-stage-img_auto_b8070cb73390ad6a91c5b77f1c5ba5f1/cdn-speedtest.jpeg"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/675/thumb__home-stage-img/why-cdnetworks.jpeg"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/vendor/jquery.socialshareprivacy2/images/socialshareprivacy_on_off.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/89/thumb__fullwidth-slider-img/the-economist-copy.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/80/thumb__fullwidth-slider-img/customer_tesco_logo_01.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/285/thumb__teaser-slider-little-img/semi.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/vendor/jquery.socialshareprivacy2/images/settings.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/dist/img/logo-cdn-ohne-claim.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/vendor/jquery.socialshareprivacy2/images/dummy_twitter.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/12/thumb__teaser-slider-img/e-tourism-cdn.jpeg"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/14/thumb__teaser-slider-img/e-commerce-cdn.jpeg"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/1991/thumb__home-stage-img/cyber-criminal-hacking-green-1.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/760/thumb__teaser-slider-little-img/customer_tune_up_logo_01.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/79/thumb__fullwidth-slider-img/customer_river_island_logo_01.png"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "7 days"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "MainResourceServerResponseTime": {
+                "localizedRuleName": "Reduce server response time",
+                "ruleImpact": 6.01,
+                "groups": [
+                    "SPEED"
+                ],
+                "summary": {
+                    "format": "In our test, your server responded in {{RESPONSE_TIME}}.",
+                    "args": [
+                        {
+                            "type": "DURATION",
+                            "key": "RESPONSE_TIME",
+                            "value": "0.80 seconds"
+                        }
+                    ]
+                },
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "There are many factors that can slow down your server response time. {{BEGIN_LINK}}Please read our recommendations{{END_LINK}} to learn how you can monitor and measure where your server is spending the most time.",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "key": "LINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/Server"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "MinifyCss": {
+                "localizedRuleName": "Minify CSS",
+                "ruleImpact": 0.0,
+                "groups": [
+                    "SPEED"
+                ],
+                "summary": {
+                    "format": "Your CSS is minified. Learn more about {{BEGIN_LINK}}minifying CSS{{END_LINK}}.",
+                    "args": [
+                        {
+                            "type": "HYPERLINK",
+                            "key": "LINK",
+                            "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+                        }
+                    ]
+                }
+            },
+            "MinifyHTML": {
+                "localizedRuleName": "Minify HTML",
+                "ruleImpact": 0.2394,
+                "groups": [
+                    "SPEED"
+                ],
+                "summary": {
+                    "format": "Compacting HTML code, including any inline JavaScript and CSS contained in it, can save many bytes of data and speed up download and parse times."
+                },
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "{{BEGIN_LINK}}Minify HTML{{END_LINK}} for the following resources to reduce their size by {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "key": "LINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+                                },
+                                {
+                                    "type": "BYTES",
+                                    "key": "SIZE_IN_BYTES",
+                                    "value": "2.3KiB"
+                                },
+                                {
+                                    "type": "PERCENTAGE",
+                                    "key": "PERCENTAGE",
+                                    "value": "12%"
+                                }
+                            ]
+                        },
+                        "urls": [
+                            {
+                                "result": {
+                                    "format": "Minifying {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction) after compression.",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/us/en"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "2.3KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "12%"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "MinifyJavaScript": {
+                "localizedRuleName": "Minify JavaScript",
+                "ruleImpact": 15.3412,
+                "groups": [
+                    "SPEED"
+                ],
+                "summary": {
+                    "format": "Compacting JavaScript code can save many bytes of data and speed up downloading, parsing, and execution time."
+                },
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "{{BEGIN_LINK}}Minify JavaScript{{END_LINK}} for the following resources to reduce their size by {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "key": "LINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+                                },
+                                {
+                                    "type": "BYTES",
+                                    "key": "SIZE_IN_BYTES",
+                                    "value": "149.8KiB"
+                                },
+                                {
+                                    "type": "PERCENTAGE",
+                                    "key": "PERCENTAGE",
+                                    "value": "52%"
+                                }
+                            ]
+                        },
+                        "urls": [
+                            {
+                                "result": {
+                                    "format": "Minifying {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://rum-beacon.cdnetworks.com/jsd/ruiter?d=c7c87ea7b85c454b9fe8a3b32c933e72"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "148.3KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "53%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Minifying {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction) after compression.",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/pimcore/static6/js/frontend/targeting.js"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "1.5KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "26%"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "MinimizeRenderBlockingResources": {
+                "localizedRuleName": "Eliminate render-blocking JavaScript and CSS in above-the-fold content",
+                "ruleImpact": 2.0,
+                "groups": [
+                    "SPEED"
+                ],
+                "summary": {
+                    "format": "Your page has {{NUM_SCRIPTS}} blocking script resources. This causes a delay in rendering your page.",
+                    "args": [
+                        {
+                            "type": "INT_LITERAL",
+                            "key": "NUM_SCRIPTS",
+                            "value": "1"
+                        }
+                    ]
+                },
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "None of the above-the-fold content on your page could be rendered without waiting for the following resources to load. Try to defer or asynchronously load blocking resources, or inline the critical portions of those resources directly in the HTML."
+                        }
+                    },
+                    {
+                        "header": {
+                            "format": "{{BEGIN_LINK}}Remove render-blocking JavaScript{{END_LINK}}:",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "key": "LINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/BlockingJS"
+                                }
+                            ]
+                        },
+                        "urls": [
+                            {
+                                "result": {
+                                    "format": "{{URL}}",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/pimcore/static6/js/frontend/targeting.js"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "OptimizeImages": {
+                "localizedRuleName": "Optimize images",
+                "ruleImpact": 47.453300000000006,
+                "groups": [
+                    "SPEED"
+                ],
+                "summary": {
+                    "format": "Properly formatting and compressing images can save many bytes of data."
+                },
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "{{BEGIN_LINK}}Optimize the following images{{END_LINK}} to reduce their size by {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "key": "LINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/OptimizeImages"
+                                },
+                                {
+                                    "type": "BYTES",
+                                    "key": "SIZE_IN_BYTES",
+                                    "value": "463.4KiB"
+                                },
+                                {
+                                    "type": "PERCENTAGE",
+                                    "key": "PERCENTAGE",
+                                    "value": "34%"
+                                }
+                            ]
+                        },
+                        "urls": [
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/673/thumb__image-slider-img/cdn-speedtest.jpeg"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "90.7KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "31%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/675/thumb__home-stage-img/why-cdnetworks.jpeg"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "82.3KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "37%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/675/thumb__home-stage-img-mobile/why-cdnetworks.jpeg"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "45.4KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "40%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/673/thumb__home-stage-img_auto_b8070cb73390ad6a91c5b77f1c5ba5f1/cdn-speedtest.jpeg"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "43.3KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "34%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/1991/thumb__home-stage-img/cyber-criminal-hacking-green-1.png"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "42.8KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "31%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/12/thumb__teaser-slider-img/e-tourism-cdn.jpeg"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "34.9KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "34%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/1991/thumb__home-stage-img-mobile/cyber-criminal-hacking-green-1.png"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "24.6KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "33%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/70/thumb__teaser-slider-img/business-services-cdn.jpeg"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "24.4KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "33%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/673/thumb__home-stage-img-mobile_auto_c71bc0ce29dcf25de4d8a9d078aa42fc/cdn-speedtest.jpeg"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "22.3KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "35%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/14/thumb__teaser-slider-img/e-commerce-cdn.jpeg"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "19.7KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "37%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/75/thumb__teaser-slider-img/it-services-cdn.jpeg"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "14.9KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "27%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/chat-with-us.png"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "3.8KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "52%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/chat-icon.jpg"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "3.7KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "80%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/dist/img/sprachenswitch-sprite.jpg"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "3.2KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "64%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/default-close.png"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "3KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "77%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/91/thumb__fullwidth-slider-img/dell.png"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "2.5KiB"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "37%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/vendor/jquery.socialshareprivacy2/images/socialshareprivacy_on_off.png"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "1,016B"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "51%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/var/tmp/image-thumbnails/0/88/thumb__fullwidth-slider-img/kuoni-logo.jpeg"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "768B"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "16%"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.cdnetworks.com/website/static/vendor/jquery.socialshareprivacy2/images/settings.png"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "key": "SIZE_IN_BYTES",
+                                            "value": "106B"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "key": "PERCENTAGE",
+                                            "value": "17%"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "PrioritizeVisibleContent": {
+                "localizedRuleName": "Prioritize visible content",
+                "ruleImpact": 0.0,
+                "groups": [
+                    "SPEED"
+                ],
+                "summary": {
+                    "format": "You have the above-the-fold content properly prioritized. Learn more about {{BEGIN_LINK}}prioritizing visible content{{END_LINK}}.",
+                    "args": [
+                        {
+                            "type": "HYPERLINK",
+                            "key": "LINK",
+                            "value": "https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "version": {
+        "major": 1,
+        "minor": 15
+    }
+}
